@@ -1,0 +1,15 @@
+<h1>Hay {{cantidad}} palabras en el texto ingresado</h1>
+
+<a href="{% url 'home' %}">Volver Inicio</a>
+
+<h1>Texto Ingresado:</h1>
+{{texto_completo}}
+
+<h1>Frecuencia de las Palabras:</h1>
+
+{% for pal, frec in palabra_frecuencia.items %}
+	<li> {{ pal }}:{{ frec }} </li>
+
+{% endfor %}
+
+
